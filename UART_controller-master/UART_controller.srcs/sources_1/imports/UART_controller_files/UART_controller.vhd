@@ -11,13 +11,13 @@ entity UART_controller is
         tx_enable        : in  std_logic;
 
         data_in          : in  std_logic_vector (7 downto 0);
-        -- data_out         : out std_logic_vector (7 downto 0);
+        data_out         : out std_logic_vector (7 downto 0);
 
         rx               : in  std_logic;
         tx               : out std_logic;
         
-        sseg_cathodes : out std_logic_vector (6 downto 0);
-        sseg_anodes : out std_logic_vector (3 downto 0)
+        cathodes : out std_logic_vector (6 downto 0);
+        anodes : out std_logic_vector (3 downto 0)
         );
 end UART_controller;
 
@@ -49,16 +49,17 @@ architecture Behavioral of UART_controller is
     end component;
 
     signal button_pressed : std_logic;
+    signal rx_data : std_logic_vector(7 downto 0);
     
 
-    signal dummy : std_logic_vector(7 downto 0);
+    -- signal dummy : std_logic_vector(7 downto 0); 11/5
 
 
 begin
     -- sseg_cathodes <= data_out(6 downto 0);
-    sseg_anodes <= "1110";
+    anodes <= "1110";
     -- sseg_cathodes <= dummy(6 downto 0);
-
+    data_out<= rx_data;
 
 
 
@@ -76,33 +77,30 @@ begin
             reset          => reset,
             tx_start       => button_pressed,
             data_in        => data_in,
-            data_out       => dummy,
+            data_out       => rx_data,
             rx             => rx,
             tx             => tx
             );
 
 
-    decoder_proc : process(dummy) --0011
+    decoder_proc : process(rx_data) --0011
     
     begin 
-        case dummy is 
-            when "00110000" => sseg_cathodes <= "1000000"; -- 0
-            when "00110001" => sseg_cathodes <= "1111001"; -- 1
-            when "00110010" => sseg_cathodes <= "0100100"; -- 2
-            when "00110011" => sseg_cathodes <= "0110000"; -- 3
-            when "00110100" => sseg_cathodes <= "0011001"; -- 4
-            when "00110101" => sseg_cathodes <= "0010010"; -- 5
-            when "00110110" => sseg_cathodes <= "0000010"; -- 6
-            when "00110111" => sseg_cathodes <= "1111000"; -- 7
-            when "00111000" => sseg_cathodes <= "0000000"; -- 8
-            when "00111001" => sseg_cathodes <= "0010000"; -- 9
-            when others => sseg_cathodes <= "1111111";
+        case rx_data is 
+            when "00110000" => cathodes <= "1000000"; -- 0
+            when "00110001" => cathodes <= "1111001"; -- 1
+            when "00110010" => cathodes <= "0100100"; -- 2
+            when "00110011" => cathodes <= "0110000"; -- 3
+            when "00110100" => cathodes <= "0011001"; -- 4
+            when "00110101" => cathodes <= "0010010"; -- 5
+            when "00110110" => cathodes <= "0000010"; -- 6
+            when "00110111" => cathodes <= "1111000"; -- 7
+            when "00111000" => cathodes <= "0000000"; -- 8
+            when "00111001" => cathodes <= "0010000"; -- 9
+            when others => cathodes <= "1111111";
         end case;
     end process;
 end Behavioral;
-
-
-
 
 
 
