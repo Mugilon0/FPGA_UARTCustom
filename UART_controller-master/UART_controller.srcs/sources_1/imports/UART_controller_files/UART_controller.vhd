@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
+
 entity UART_controller is
 
     port(
@@ -48,9 +49,21 @@ architecture Behavioral of UART_controller is
             );
     end component;
 
+    component UART_calculater
+    port(
+        clk : in std_logic;
+        reset : in std_logic;
+        add_num : in std_logic_vector(7 downto 0);
+        calced_num : out unsigned(3 downto 0)
+    );
+    end component;
+
     signal button_pressed : std_logic;
     signal rx_data : std_logic_vector(7 downto 0);
     
+
+    -- 表示したい最終値
+    signal sum : unsigned(3 downto 0);
 
     -- signal dummy : std_logic_vector(7 downto 0); 11/5
 
@@ -82,21 +95,28 @@ begin
             tx             => tx
             );
 
+    UART_calculator: UART_calculater
+    port map(
+        clk => clk,
+        reset => reset,
+        add_num => rx_data,
+        calced_num => sum
+    );
 
-    decoder_proc : process(rx_data) --0011
+    decoder_proc : process(sum) --0011
     
     begin 
-        case rx_data is 
-            when "00110000" => cathodes <= "1000000"; -- 0
-            when "00110001" => cathodes <= "1111001"; -- 1
-            when "00110010" => cathodes <= "0100100"; -- 2
-            when "00110011" => cathodes <= "0110000"; -- 3
-            when "00110100" => cathodes <= "0011001"; -- 4
-            when "00110101" => cathodes <= "0010010"; -- 5
-            when "00110110" => cathodes <= "0000010"; -- 6
-            when "00110111" => cathodes <= "1111000"; -- 7
-            when "00111000" => cathodes <= "0000000"; -- 8
-            when "00111001" => cathodes <= "0010000"; -- 9
+        case sum is  --sumにしてから最初の0011は省いた 11/6
+            when "0000" => cathodes <= "1000000"; -- 0
+            when "0001" => cathodes <= "1111001"; -- 1
+            when "0010" => cathodes <= "0100100"; -- 2
+            when "0011" => cathodes <= "0110000"; -- 3
+            when "0100" => cathodes <= "0011001"; -- 4
+            when "0101" => cathodes <= "0010010"; -- 5
+            when "0110" => cathodes <= "0000010"; -- 6
+            when "0111" => cathodes <= "1111000"; -- 7
+            when "1000" => cathodes <= "0000000"; -- 8
+            when "1001" => cathodes <= "0010000"; -- 9
             when others => cathodes <= "1111111";
         end case;
     end process;

@@ -58,7 +58,6 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -77,6 +76,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd
+  C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_calculate.vhd
   C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd
   C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd
   C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/button_debounce.vhd

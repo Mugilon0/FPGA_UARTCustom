@@ -8,11 +8,12 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Thu Oct 23 18:20:50 2025
+  **** Start of session at: Thu Nov 13 17:11:10 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source UART_controller.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 365.641 ; gain = 65.086
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/mugil/work/fpga/uart_tutorial_def/cortex_m1/arm_ip/vivado/Arm_ipi_repository'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
@@ -26,15 +27,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2092
+INFO: [Synth 8-7075] Helper process launched with PID 19596
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1031.297 ; gain = 467.273
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1030.625 ; gain = 466.141
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'UART_controller' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:25]
-INFO: [Synth 8-3491] module 'button_debounce' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/button_debounce.vhd:8' bound to instance 'tx_button_controller' of component 'button_debounce' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'UART_controller' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:26]
+INFO: [Synth 8-3491] module 'button_debounce' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/button_debounce.vhd:8' bound to instance 'tx_button_controller' of component 'button_debounce' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:79]
 INFO: [Synth 8-638] synthesizing module 'button_debounce' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/button_debounce.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'button_debounce' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/button_debounce.vhd:20]
-INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd:9' bound to instance 'UART_transceiver' of component 'UART' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:73]
+INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd:9' bound to instance 'UART_transceiver' of component 'UART' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:87]
 INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd:25]
 INFO: [Synth 8-3491] module 'UART_tx' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd:8' bound to instance 'transmitter' of component 'UART_tx' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'UART_tx' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd:23]
@@ -45,102 +46,57 @@ INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/mugil/work/fpga/uart
 INFO: [Synth 8-226] default block is never used [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd:78]
 INFO: [Synth 8-256] done synthesizing module 'UART_rx' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'UART' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'UART_controller' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:25]
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[3] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[2] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[1] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[0] driven by constant 0
+INFO: [Synth 8-3491] module 'UART_calculater' declared at 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_calculate.vhd:6' bound to instance 'UART_calculator' of component 'UART_calculater' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'UART_calculater' [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_calculate.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'UART_calculater' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_calculate.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'UART_controller' (0#1) [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/sources_1/imports/UART_controller_files/UART_controller.vhd:26]
+WARNING: [Synth 8-3917] design UART_controller has port anodes[3] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[2] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[1] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1138.875 ; gain = 574.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1137.895 ; gain = 573.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1138.875 ; gain = 574.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1137.895 ; gain = 573.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1138.875 ; gain = 574.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1137.895 ; gain = 573.410
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1138.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1137.895 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.srcs/constrs_1/imports/UART_controller_files/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_controller_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/UART_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1228.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1228.184 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1228.332 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1228.184 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1228.332 ; gain = 664.309
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1228.184 ; gain = 663.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1228.332 ; gain = 664.309
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1228.184 ; gain = 663.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1228.332 ; gain = 664.309
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.184 ; gain = 663.699
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'UART_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART_rx'
@@ -163,7 +119,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1228.332 ; gain = 664.309
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1228.184 ; gain = 663.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -172,7 +128,8 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   10 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 2     
@@ -180,14 +137,13 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 10    
 +---Muxes : 
 	   2 Input    8 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
 	   4 Input    4 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
@@ -211,30 +167,30 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[3] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[2] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[1] driven by constant 1
-WARNING: [Synth 8-3917] design UART_controller has port sseg_anodes[0] driven by constant 0
+WARNING: [Synth 8-3917] design UART_controller has port anodes[3] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[2] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[1] driven by constant 1
+WARNING: [Synth 8-3917] design UART_controller has port anodes[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1228.332 ; gain = 664.309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1228.184 ; gain = 663.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1330.477 ; gain = 766.453
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 1337.535 ; gain = 773.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1360.242 ; gain = 796.219
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 1368.078 ; gain = 803.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1360.242 ; gain = 796.219
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1368.078 ; gain = 803.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -252,37 +208,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -301,39 +257,38 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     6|
 |3     |LUT1   |     4|
-|4     |LUT2   |    11|
+|4     |LUT2   |    15|
 |5     |LUT3   |     6|
-|6     |LUT4   |     8|
-|7     |LUT5   |    20|
-|8     |LUT6   |    33|
-|9     |FDRE   |    66|
+|6     |LUT4   |    14|
+|7     |LUT5   |    14|
+|8     |LUT6   |    37|
+|9     |FDRE   |    70|
 |10    |FDSE   |    14|
 |11    |IBUF   |    12|
-|12    |OBUF   |    12|
+|12    |OBUF   |    20|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:45 . Memory (MB): peak = 1557.418 ; gain = 903.938
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1557.418 ; gain = 993.395
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:07 . Memory (MB): peak = 1564.707 ; gain = 909.934
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 1564.707 ; gain = 1000.223
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1557.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1566.750 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1557.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1570.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: b752e651
+Synth Design complete | Checksum: fb514a3f
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 27 Warnings, 16 Critical Warnings and 0 Errors encountered.
+40 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1557.418 ; gain = 1189.219
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1557.418 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:27 . Memory (MB): peak = 1570.250 ; gain = 1201.598
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1570.250 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/mugil/work/fpga/uart_tutorial_def/UART_controller-master/UART_controller.runs/synth_1/UART_controller.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file UART_controller_utilization_synth.rpt -pb UART_controller_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 23 18:21:57 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 17:12:49 2025...
